@@ -1,0 +1,117 @@
+<?php 
+session_start();
+if(!isset($_SESSION['alumni'])) {
+	header("Location: alumni.html");
+	exit;
+}
+
+<?php 
+session_start();
+if(!isset($_SESSION['home'])) {
+	header("Location: index.html");
+	exit;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Alumni</title>
+    <!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap" rel="stylesheet">
+	
+	<!-- Feather Icons -->
+	<script src="https://unpkg.com/feather-icons"></script>
+
+	<!-- My Style -->
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navbar Alumni Start -->
+	<nav class="navbar-alumni">
+		<a class="navbar-logo-alumni">Politeknik<span> LP3i</span> Jakarta</a>
+		<div class="navbar-nav-alumni">
+			<a href="index.html" class="home">Beranda</a>
+			<a href="profile.html" class="profile">Profile</a>
+			<a href="major.html" class="major">Jurusan</a>
+			<a href="alumni.html" class="alumni">Alumni</a>
+			<a href="#contact-alumni">Kontak</a>
+		</div>
+		<div class="navbar-extra-alumni">
+			<a href="#" id="search"><i 
+				data-feather="search"></i></a>
+			<a href="#" id="hamburger-menu"><i 
+				data-feather="menu"></i></a>
+		</div>
+	</nav>
+	<!-- Navbar Alumni End -->
+
+	<!-- Graduate Section Start -->
+	<section class="graduate" id="alumni">
+		<main class="content">
+			<h1>Alumni Politeknik LP3i Jakarta</h1>
+		</main>
+	</section>
+	<form action="" method="post" class="find">
+		<ul>
+			<li>
+				<label for="nama">Nama Mahasiswa : </label>
+				<input type="text" name="nama" id="nama">
+			</li>
+			<li>
+				<label for="nim">Nomor Induk Mahasiswa : </label>
+				<input type="text" name="nim" id="nim">
+			</li>
+			<li>
+				<label for="prodi">Jurusan : </label>
+				<input type="text" name="prodi" id="prodi">
+			</li>
+			<li>
+				<button type="submit" name="login">Cari</button>
+			</li>
+		</ul>
+	</form>
+	<!-- Graduate Section End -->
+
+	<!-- Contact Section Start -->
+	<section id="contact-alumni" class="contact-alumni">
+		<h2>Contact Person</h2>
+		<p>Alamat :</p>
+		<p>Politeknik LP3i Jakarta</p>
+		<p>Jl. Kramat Raya No.7-9, RT.4/RW.2,</p>
+		<p>Kramat, Kec. Senen, Kota Jakarta Pusat,</p>
+		<p>Daerah Khusus Ibukota</p>
+		<p>Jakarta 10450</p>
+		<p>+62 815 1475 6666</p>
+		<br>
+		<div class="row">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126932.4110904827!2d106.71075956249997!3d-6.179206599999987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f44a6950dc35%3A0x333f0215fb1bdcab!2sPoliteknik%20LP3I%20Jakarta!5e0!3m2!1sid!2sid!4v1707250790735!5m2!1sid!2sid" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+		</div>
+	</section>
+	<!-- Contact Section End -->
+
+	<!-- Footer Start -->
+	<footer>
+		<div class="socials">
+			<a href="#"><i data-feather="instagram"></i></a>
+			<a href="#"><i data-feather="twitter"></i></a>
+			<a href="#"><i data-feather="facebook"></i></a>
+		</div>
+		<div class="credit">
+			<p>Created by <a href="">Delaap</a> &copy;2024</p>
+		</div>
+	</footer>
+	<!-- Footer End -->
+
+    <!-- Feather Icons -->
+	<script>
+        feather.replace();
+      </script>
+
+    <!-- My Javascript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
